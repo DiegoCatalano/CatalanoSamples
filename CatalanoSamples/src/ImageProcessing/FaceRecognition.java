@@ -11,7 +11,6 @@ import Catalano.Imaging.Filters.Photometric.TanTriggsNormalization;
 import Catalano.Imaging.Texture.BinaryPattern.ImprovedLocalBinaryPattern;
 import Catalano.Imaging.Tools.SpatialHistogram;
 import Catalano.MachineLearning.Classification.MulticlassSupportVectorMachine;
-import Catalano.MachineLearning.DatasetClassification;
 import Catalano.MachineLearning.Performance.HoldoutValidation;
 import Catalano.Statistics.Kernels.ChiSquare;
 
@@ -53,7 +52,7 @@ public class FaceRecognition {
         System.out.println("Features extracted.");
         
         //Optional save in ARFF file
-//        DatasetClassification dataset = new DatasetClassification("My Face features", data, labels);
+//        DatasetClassification dataset = new DatasetClassification("My_Face_features", data, labels);
 //        dataset.WriteAsARFF("face.arff");
         
         MulticlassSupportVectorMachine ml = new MulticlassSupportVectorMachine(new ChiSquare(), 1, 40); 
